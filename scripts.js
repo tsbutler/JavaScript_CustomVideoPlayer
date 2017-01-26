@@ -18,5 +18,15 @@ function togglePlay() {
   // }
 }
 
+function updateButton() {
+  toggle.textContent = this.paused ? '►' : '❚ ❚';
+  // The single line above does what the two lines below do
+  // const icon = this.paused ? '►' : '❚ ❚';
+  // toggle.textContent = icon;
+  // console.log(icon);
+}
 /* Hook up our event listeners */
 video.addEventListener('click', togglePlay);
+video.addEventListener('play', updateButton);
+video.addEventListener('pause', updateButton);
+toggle.addEventListener('click', togglePlay);
