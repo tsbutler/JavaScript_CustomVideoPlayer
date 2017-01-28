@@ -27,14 +27,11 @@ function updateButton() {
 }
 
 function skip() {
-  console.log(this.dataset.skip);
   video.currentTime += parseFloat(this.dataset.skip);
 }
 
 function handleRangeUpdate() {
   video[this.name] = this.value;
-  console.log(this.name);
-  console.log(this.value);
 }
 /* Hook up our event listeners */
 video.addEventListener('click', togglePlay);
