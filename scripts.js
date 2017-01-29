@@ -33,6 +33,10 @@ function skip() {
 function handleRangeUpdate() {
   video[this.name] = this.value;
 }
+
+function handleProgress() {
+  const percent = (video.currentTime / video.duration) * 100;
+}
 /* Hook up our event listeners */
 video.addEventListener('click', togglePlay);
 video.addEventListener('play', updateButton);
